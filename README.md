@@ -41,20 +41,24 @@ credit-risk-sql-analysis/
 ## How to run
 
 ### 1️⃣ Create the schema and tables:
-Run 'sql/01_schema.sql' in pgAdmin connected to 'credit_risk_db'.
+Run `sql/01_schema.sql` in pgAdmin connected to `credit_risk_db`.
 
 ### 2️⃣ Importing CSV data:
-credit_risk_db -> Schemas -> credit -> applications_raw
-Right click `applications_raw` and click `Import/Export Data...`
-- Import
+- credit_risk_db → Schemas → credit → applications_raw
+- Right click `applications_raw`
+- Click `Import/Export Data...`
+- Import/Export: Import
 - Filename: copy your file path where CSV is stored
 - Encoding: UTF8
+
 Go to options:
 - Header: on
 - Delimiter: ,
 - Quote: "
 - Escape: "
+
 Click `OK`
+
 Update the file path inside `sql/02_import.sql` to match your local CSV path.
 Then execute `02_import.sql`.
 
